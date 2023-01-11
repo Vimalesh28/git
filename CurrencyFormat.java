@@ -30,11 +30,11 @@ class CurrencyFormat {
     	String[] countries= {US,INDIA,CHINA,FRANCE};//initialize the string array with countryname
     	double payment=0;//initialize the money in the double using payment varaible
     	for(String countryName:countries) {//using for each loop initialize the countries array to countryName 
-    		try {//check the countryName is not empty 
-    			printcurrency(countryName,payment);
+    		try {//wheather the countryname is empty are not .if empty it will goes catch block ot empty the try block will be executed
+    			printcurrency(countryName,payment);//calling the method and give the 2 value that are countryname,payment
     		}
-    		catch(IllegalArgumentException e) {//it will be empty print the mess....
-    			System.out.println(e.getMessage());//print the it will be empty
+    		catch(IllegalArgumentException e) {//it will be empty or for look will fails the cathc block will execute....
+    			System.out.println(e.getMessage());//print  it will be empty
     		}
     	}
     	
