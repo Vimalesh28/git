@@ -31,7 +31,7 @@ class CurrencyFormat {
     	double payment=0;//initialize the money in the double using payment varaible
     	for(String countryName:countries) {//using for each loop initialize the countries array to countryName 
     		try {//check the countryName is not empty 
-    			printcurrency(countryName,payment);//calling the method by the parameter (countryName,payment)
+    			printcurrency(countryName,payment);
     		}
     		catch(IllegalArgumentException e) {//it will be empty print the mess....
     			System.out.println(e.getMessage());//print the it will be empty
