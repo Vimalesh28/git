@@ -21,7 +21,7 @@ class CurrencyFormat {
     private static void printcurrency(final String countryName,final double payment)throws  IllegalArgumentException{
     	Locale locale=LOCALE_MAP.get(countryName);//in the locale variable the hashmap.get is used to check by give the key  wheather the it will be present or not. 
     	if(locale == null) {//if the countryname is invalid (that means LOCALE_MAP key and the countryname are not same it will store null) 
-    		throw new IllegalArgumentException ("unsupport country"+ countryName);//LOCALE_MAP key and the countryname are not same it will print
+    		throw new IllegalArgumentException ("unsupport country"+ countryName);//when the variable is declare but we cannot be added the Locale into the map it will show the IllegalArgument Exception...
     	}
     	String formatCurrency=NumberFormat.getCurrencyInstance(locale).format(payment);//both LOCALE_MAP key and the countryname are  same it will change the payment to respective cuurency
     	System.out.println(countryName+" "+formatCurrency);//print the countryname and the and changed the formatCurrency
@@ -33,7 +33,7 @@ class CurrencyFormat {
     		try {//wheather the countryname is empty are not .if empty it will goes catch block ot empty the try block will be executed
     			printcurrency(countryName,payment);//calling the method and give the 2 value that are countryname,payment
     		}
-    		catch(IllegalArgumentException e) {//it will be empty or for look will fails the cathc block will execute....
+    		catch(IllegalArgumentException e) {//it will be empty or for look will fails the catch block will execute....
     			System.out.println(e.getMessage());//print  it will be empty
     		}
     	}
