@@ -12,7 +12,7 @@ public static void main(String[] args) {
 {
 		count[(int)str.charAt(i)]++;
 		}
-	for(int i=0;i<122;i++) {
+	for(int i=97;i<122;i++) {
 		if(count[i]!=0)
 		System.out.println((char) i+" "+count[i]);
 	}
